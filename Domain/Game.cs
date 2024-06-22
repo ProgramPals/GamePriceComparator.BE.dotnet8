@@ -43,4 +43,3 @@ public class Game
     public List<Review> Reviews { get; set; }
     public List<Transaction> Transactions { get; set;}
 }
-
