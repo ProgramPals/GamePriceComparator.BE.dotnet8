@@ -41,4 +41,5 @@ public class Game
     public List<Wishlist> Wishlists { get; set; }
     public List<PriceAlert> PriceAlerts { get; set; }
     public List<Review> Reviews { get; set; }
-    public List<Transaction> Transactions { get;
+    public List<Transaction> Transactions { get; set;}
+
