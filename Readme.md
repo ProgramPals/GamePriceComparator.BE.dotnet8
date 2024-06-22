@@ -1,0 +1,1 @@
+[![.NET](https://github.com/CreativePudding/GamePriceComparator.BE.dotnet8/actions/workflows/dotnet.yml/badge.svg)](https://github.com/CreativePudding/GamePriceComparator.BE.dotnet8/actions/workflows/dotnet.yml)
