@@ -1,30 +1,42 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class Transaction
+
+namespace Domain
 {
-    [Key]
-    public int TransactionId { get; set; }
+    public class Transaction
+    {
+        public Transaction()
+        {
+            User = new User();
+            Game = new Game();
+            Store = new Store();
+            Currency = String.Empty;
+        }
 
-    [Required]
-    public int UserId { get; set; }
 
-    [Required]
-    public int GameId { get; set; }
+        [Key]
+        public int TransactionId { get; set; }
 
-    [Required]
-    public int StoreId { get; set; }
+        [Required]
+        public int UserId { get; set; }
 
-    [Required]
-    public decimal GamePrice { get; set; }
+        [Required]
+        public int GameId { get; set; }
 
-    [Required]
-    [MaxLength(10)]
-    public string Currency { get; set; }
+        [Required]
+        public int StoreId { get; set; }
 
-    public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
+        [Required]
+        public decimal GamePrice { get; set; }
 
-    public User User { get; set; }
-    public Game Game { get; set; }
-    public Store Store { get; set; }
+        [Required]
+        [MaxLength(10)]
+        public string Currency { get; set; }
+
+        public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
+
+        public User User { get; set; }
+        public Game Game { get; set; }
+        public Store Store { get; set; }
+    }
 }

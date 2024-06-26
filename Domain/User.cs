@@ -1,33 +1,46 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class User
+
+namespace Domain
 {
-    [Key]
-    public int UserId { get; set; }
+    public class User
+    {
+        public User()
+        {
+            Wishlists = new List<Wishlist>();
+            PriceAlerts = new List<PriceAlert>();
+            Reviews = new List<Review>();
+            Transactions = new List<Transaction>();
+            Username = string.Empty; // Initialize to empty string
+            Email = string.Empty; // Initialize to empty string
+            Password = string.Empty; // Initialize to empty string
+            ProfileImageUrl = string.Empty; // Initialize to empty string
+        }
 
-    [Required]
-    [MaxLength(255)]
-    public string Username { get; set; }
+        [Key]
+        public int UserId { get; set; }
 
-    [Required]
-    [EmailAddress]
-    public string Email { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Username { get; set; }
 
-    [Required]
-    public string Password { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
 
-    [MaxLength(500)]
-    public string ProfileImageUrl { get; set; }
+        [Required]
+        public string Password { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        [MaxLength(500)]
+        public string ProfileImageUrl { get; set; }
 
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public List<Wishlist> Wishlists { get; set; }
-    public List<PriceAlert> PriceAlerts { get; set; }
-    public List<Review> Reviews { get; set; }
-    public List<Transaction> Transactions { get; set; }
+        public List<Wishlist> Wishlists { get; set; }
+        public List<PriceAlert> PriceAlerts { get; set; }
+        public List<Review> Reviews { get; set; }
+        public List<Transaction> Transactions { get; set; }
+    }
 }
-

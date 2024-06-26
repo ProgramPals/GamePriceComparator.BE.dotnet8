@@ -1,0 +1,13 @@
+{
+    "folders":
+    [
+        {
+            /*"follow_symlinks": true,*/
+            "path": ".",
+        },
+        {
+			"path": "/Users/slawomirgrabos/Development/GamePriceComparatorProject/GamePriceComparator.IAC"
+		},
+    ],
+    "solution_file": "./testconsoleprj.sln",
+}

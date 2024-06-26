@@ -1,23 +1,33 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class PriceAlert
+
+namespace Domain
 {
-    [Key]
-    public int AlertId { get; set; }
+    public class PriceAlert
+    {
+        public PriceAlert()
+        {
+            User = new User();
+            Game = new Game();
+        }
 
-    [Required]
-    public int UserId { get; set; }
 
-    [Required]
-    public int GameId { get; set; }
+        [Key]
+        public int AlertId { get; set; }
 
-    [Required]
-    public decimal DesiredPrice { get; set; }
+        [Required]
+        public int UserId { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        [Required]
+        public int GameId { get; set; }
 
-    public User User { get; set; }
-    public Game Game { get; set; }
+        [Required]
+        public decimal DesiredPrice { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public User User { get; set; }
+        public Game Game { get; set; }
+    }
 }
