@@ -21,8 +21,7 @@ public class Transaction
     [Required]
     [MaxLength(10)]
     public string Currency { get; set; }
-
-    public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
+    
 
     public User User { get; set; }
     public Game Game { get; set; }

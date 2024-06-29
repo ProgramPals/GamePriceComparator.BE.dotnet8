@@ -18,8 +18,7 @@ public class Price
     [Required]
     [MaxLength(10)]
     public string Currency { get; set; }
-
-    public DateTime PriceUpdatedAt { get; set; } = DateTime.UtcNow;
+    
 
     public Game Game { get; set; }
     public Store Store { get; set; }

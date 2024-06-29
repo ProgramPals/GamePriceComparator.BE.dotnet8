@@ -12,8 +12,6 @@ public class Wishlist
     [Required]
     public int GameId { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
     public User User { get; set; }
     public Game Game { get; set; }
 }

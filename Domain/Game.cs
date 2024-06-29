@@ -32,10 +32,6 @@ public class Game
 
     public List<string> GalleryImageUrls { get; set; } = new List<string>();
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
     public List<GameImage> GameImages { get; set; }
     public List<Price> Prices { get; set; }
     public List<Wishlist> Wishlists { get; set; }

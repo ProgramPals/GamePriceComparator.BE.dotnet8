@@ -18,12 +18,8 @@ public class User
     [Required]
     public string Password { get; set; }
 
-    [MaxLength(500)]
+    [MaxLength(500)] 
     public string ProfileImageUrl { get; set; }
-
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public List<Wishlist> Wishlists { get; set; }
     public List<PriceAlert> PriceAlerts { get; set; }

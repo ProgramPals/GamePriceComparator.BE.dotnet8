@@ -16,8 +16,6 @@ public class GameImage
     [Required]
     [MaxLength(50)]
     public string ImageType { get; set; }  // e.g., 'cover', 'screenshot'
-
-    public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
-
+    
     public Game Game { get; set; }
 }
