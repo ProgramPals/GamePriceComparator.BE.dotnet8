@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
 
-public class Genre
+public class Genre : AuditableEntity
 {
     [Key]
     public int GenreId { get; set; }

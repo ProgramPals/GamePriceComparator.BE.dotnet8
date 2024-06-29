@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class Price
+public class Price : AuditableEntity
 {
     [Key]
     public int PriceId { get; set; }
@@ -18,7 +18,7 @@ public class Price
     [Required]
     [MaxLength(10)]
     public string Currency { get; set; }
-    
+
 
     public Game Game { get; set; }
     public Store Store { get; set; }

@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class PriceAlert
+public class PriceAlert : AuditableEntity
 {
     [Key]
     public int AlertId { get; set; }

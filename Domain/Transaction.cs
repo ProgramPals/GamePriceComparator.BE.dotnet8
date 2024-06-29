@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class Transaction
+public class Transaction : AuditableEntity
 {
     [Key]
     public int TransactionId { get; set; }
@@ -21,7 +21,7 @@ public class Transaction
     [Required]
     [MaxLength(10)]
     public string Currency { get; set; }
-    
+
 
     public User User { get; set; }
     public Game Game { get; set; }

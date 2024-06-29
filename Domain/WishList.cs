@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class Wishlist
+public class Wishlist : AuditableEntity
 {
     [Key]
     public int WishlistId { get; set; }

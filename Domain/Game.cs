@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class Game
+public class Game : AsyncLocalValueChangedArgs
 {
     [Key]
     public int GameId { get; set; }
@@ -37,5 +37,5 @@ public class Game
     public List<Wishlist> Wishlists { get; set; }
     public List<PriceAlert> PriceAlerts { get; set; }
     public List<Review> Reviews { get; set; }
-    public List<Transaction> Transactions { get; set;}
+    public List<Transaction> Transactions { get; set; }
 }

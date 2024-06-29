@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class Store
+public class Store : AuditableEntity
 {
     [Key]
     public int StoreId { get; set; }

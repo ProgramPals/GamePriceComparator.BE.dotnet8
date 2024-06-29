@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class GameImage
+public class GameImage : AuditableEntity
 {
     [Key]
     public int ImageId { get; set; }
@@ -16,6 +16,6 @@ public class GameImage
     [Required]
     [MaxLength(50)]
     public string ImageType { get; set; }  // e.g., 'cover', 'screenshot'
-    
+
     public Game Game { get; set; }
 }

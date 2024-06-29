@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
-public class User
+public class User : AuditableEntity
 {
     [Key]
     public int UserId { get; set; }
@@ -18,7 +18,7 @@ public class User
     [Required]
     public string Password { get; set; }
 
-    [MaxLength(500)] 
+    [MaxLength(500)]
     public string ProfileImageUrl { get; set; }
 
     public List<Wishlist> Wishlists { get; set; }

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace Domain;
 
-public class Platform
+public class Platform : AuditableEntity
 {
     [Key]
     public int PlatformId { get; set; }
