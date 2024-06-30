@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
+namespace Domain.Entities;
 
-public class Genre : AuditableEntity
+public class Platform : BaseAuditableEntity
 {
     [Key]
-    public int GenreId { get; set; }
+    public int PlatformId { get; set; }
 
     [Required]
     [MaxLength(255)]

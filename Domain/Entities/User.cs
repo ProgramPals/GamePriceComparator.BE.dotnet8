@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class User : AuditableEntity
+namespace Domain.Entities;
+public class User : BaseAuditableEntity
 {
     [Key]
     public int UserId { get; set; }

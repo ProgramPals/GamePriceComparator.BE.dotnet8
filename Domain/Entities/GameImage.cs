@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class GameImage : AuditableEntity
+namespace Domain.Entities;
+public class GameImage : BaseAuditableEntity
 {
     [Key]
     public int ImageId { get; set; }

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class Game : AsyncLocalValueChangedArgs
+namespace Domain.Entities;
+public class Game : BaseAuditableEntity
 {
     [Key]
     public int GameId { get; set; }

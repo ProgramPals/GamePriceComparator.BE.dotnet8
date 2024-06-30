@@ -1,10 +1,10 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace Domain;
-public class PriceAlert : AuditableEntity
+namespace Domain.Entities;
+public class Review : BaseAuditableEntity
 {
     [Key]
-    public int AlertId { get; set; }
+    public int ReviewId { get; set; }
 
     [Required]
     public int UserId { get; set; }
@@ -13,7 +13,10 @@ public class PriceAlert : AuditableEntity
     public int GameId { get; set; }
 
     [Required]
-    public decimal DesiredPrice { get; set; }
+    [Range(1, 5)]
+    public int Rating { get; set; }
+
+    public string ReviewText { get; set; }
 
     public User User { get; set; }
     public Game Game { get; set; }
