@@ -2,5 +2,5 @@
 
 public class IUser
 {
-
+    string? Id { get; }
 }

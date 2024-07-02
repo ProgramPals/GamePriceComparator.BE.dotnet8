@@ -1,6 +1,6 @@
 ﻿namespace Application;
 
-public class ForbiddenAccessException
+public class ForbiddenAccessException : Exception
 {
-
+    public ForbiddenAccessException() : base() { }
 }
