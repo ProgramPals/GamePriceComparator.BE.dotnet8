@@ -1,4 +1,7 @@
-﻿namespace Application;
+﻿using System.Reflection;
+using MediatR;
+
+namespace Application;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {

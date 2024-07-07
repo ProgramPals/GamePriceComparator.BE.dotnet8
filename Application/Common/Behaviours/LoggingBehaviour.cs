@@ -1,8 +1,11 @@
-﻿namespace Application;
+﻿using MediatR.Pipeline;
+using Microsoft.Extensions.Logging;
+
+namespace Application;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {
-    private readonly ILoger _logger;
+    private readonly ILogger _logger;
     private readonly IUser _user;
     private readonly IIdentityService _identityService;
 

@@ -1,4 +1,6 @@
-﻿namespace Application;
+﻿using AutoMapper;
+
+namespace Application;
 
 public class LookupDto
 {
@@ -8,7 +10,8 @@ public class LookupDto
     {
         public Mapping()
         {
-
+        // TODO: Add mapping configuration
+        
         }
     }
 }

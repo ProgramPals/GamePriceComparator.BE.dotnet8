@@ -1,4 +1,8 @@
-﻿namespace Application;
+﻿using System.Diagnostics;
+using MediatR;
+using Microsoft.Extensions.Logging;
+
+namespace Application;
 
 public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
@@ -20,7 +24,7 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
 
     }
 
-    public asnyc Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         _timer.Start();
         var response = await next();

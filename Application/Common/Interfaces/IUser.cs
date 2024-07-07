@@ -1,6 +1,6 @@
 ﻿namespace Application;
 
-public class IUser
+public interface IUser
 {
     string? Id { get; }
 }
